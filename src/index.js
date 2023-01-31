@@ -1,17 +1,23 @@
+//import react and reactDom library
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//get a reference to the div with ID root
+const element=document.getElementById('root');
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//tell react to take controll of that element 
+const root = ReactDOM.createRoot(element);
+
+//extracted the component outside
+/*
+//create a component
+function App(){
+  const inputType='number';
+  const minValue=5;
+  return <input type={inputType} min={minValue} max={10}/>
+}  
+*/
+
+//show the component on the screenf
+root.render(<React.StrictMode><App /></React.StrictMode>);
