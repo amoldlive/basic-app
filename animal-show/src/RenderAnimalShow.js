@@ -6,6 +6,7 @@ import dog from './svg/dog.svg'
 import cow from './svg/cow.svg'
 import horse from './svg/horse.svg'
 import heart from './svg/heart.svg'
+import './css/RenderAnimalShow.css'
 
 const svgMap={
   bird,
@@ -32,7 +33,7 @@ function RenderAnimalShow() {
   });
 
   return (
-    <div>
+    <div className='app-container'>
       <button onClick={handleClick}>Show Animals</button>
       <div>{renderAnimals}</div>
     </div>
